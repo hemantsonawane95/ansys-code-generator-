@@ -32,7 +32,7 @@ al,{{ general.l1 }},{{ general.l2 }},{{ general.l3 }},{{ general.l4 }}
 
 {% for shape_name, shape in shapes.items() %}
 
-clocal,{{ shape.kcn }},{{ shape.kcs }},{{ shape.xl }},{{ shape.yl }},{{ shape.zl }},{{ shape.thxy }},{{ shape.THYZ }},{{ shape.thzx }},{{ shape.par1 }},{{ shape.par2 }}
+clocal,{{ shape.kcn }},{{ shape.kcs }},{{ shape.xl }},{{ shape.yl }},{{ shape.zl }},{{ shape.thxy }},{{ shape.thyz }},{{ shape.thzx }},{{ shape.par1 }},{{ shape.par2 }}
 csys,{{ shape.kcn_1 }}
 k,{{ shape.keypoint1_x }},{{ shape.keypoint1_y }},{{ shape.angle_of_rotation_1 }},{{ shape.ref }}
 k,{{ shape.keypoint2_x }},{{ shape.keypoint2_y }},{{ shape.angle_of_rotation_2 }},{{ shape.ref }}
