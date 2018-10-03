@@ -31,7 +31,6 @@ al,{{ general.l1 }},{{ general.l2 }},{{ general.l3 }},{{ general.l4 }}
 
 
 {% for shape_name, shape in shapes.items() %}
-!Mid-Ellipse -1
 
 clocal,{{ shape.kcn }},{{ shape.kcs }},{{ shape.xl }},{{ shape.yl }},{{ shape.zl }},{{ shape.thxy }},{{ shape.THYZ }},{{ shape.thzx }},{{ shape.par1 }},{{ shape.par2 }}
 csys,{{ shape.kcn }}
