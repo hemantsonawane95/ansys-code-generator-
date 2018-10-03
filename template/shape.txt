@@ -33,7 +33,7 @@ al,{{ general.l1 }},{{ general.l2 }},{{ general.l3 }},{{ general.l4 }}
 {% for shape_name, shape in shapes.items() %}
 
 clocal,{{ shape.kcn }},{{ shape.kcs }},{{ shape.xl }},{{ shape.yl }},{{ shape.zl }},{{ shape.thxy }},{{ shape.THYZ }},{{ shape.thzx }},{{ shape.par1 }},{{ shape.par2 }}
-csys,{{ shape.kcn }}
+csys,{{ shape.kcn_1 }}
 k,{{ shape.keypoint1_x }},{{ shape.keypoint1_y }},{{ shape.angle_of_rotation_1 }},{{ shape.ref }}
 k,{{ shape.keypoint2_x }},{{ shape.keypoint2_y }},{{ shape.angle_of_rotation_2 }},{{ shape.ref }}
 k,{{ shape.keypoint3_x }},{{ shape.keypoint3_y }},{{ shape.angle_of_rotation_3 }},{{ shape.ref }}
@@ -44,7 +44,7 @@ L,{{ shape.p6 }},{{ shape.p7 }}
 L,{{ shape.p7 }},{{ shape.p8 }}
 L,{{ shape.p8 }},{{ shape.p5 }}
 
-csys,{{ shape.kcn }}
+csys,{{ shape.kcn_2 }}
 
 al,{{ shape.l5 }},{{ shape.l6 }},{{ shape.l7 }},{{ shape.l8 }}
 {% endfor %}
