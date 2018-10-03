@@ -16,9 +16,9 @@ kdel,all
 
 !bounddary keypoints
 k,{{ general.x1 }},{{ general.y1 }},{{ general.z1 }}
-k,{{ general.x2 }},{{ general.y2 }},{{ general.z1 }}
-k,{{ general.x3 }},{{ general.y2 }},{{ general.z2 }}
-k,{{ general.x4 }},{{ general.y1 }},{{ general.z2 }}
+k,{{ general.x2 }},{{ general.y2 }},{{ general.z2 }}
+k,{{ general.x3 }},{{ general.y3 }},{{ general.z3 }}
+k,{{ general.x4 }},{{ general.y4 }},{{ general.z4 }}
 
 !boundary lines
 L,{{ general.p1 }},{{ general.p2 }}
