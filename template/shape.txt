@@ -1,0 +1,65 @@
+!turning on preprocessor
+
+/prep7
+
+!deleting old items
+
+vsel,all
+asel,all
+lsel,all
+ksel,all
+
+vdel,all
+adel,all
+ldel,all
+kdel,all
+
+!bounddary keypoints
+k,{{ general.x1 }},{{ general.y1 }},{{ general.z1 }}
+k,{{ general.x2 }},{{ general.y2 }},{{ general.z1 }}
+k,{{ general.x3 }},{{ general.y2 }},{{ general.z2 }}
+k,{{ general.x4 }},{{ general.y1 }},{{ general.z2 }}
+
+!boundary lines
+L,{{ general.p1 }},{{ general.p2 }}
+L,{{ general.p2 }},{{ general.p3 }}
+L,{{ general.p3 }},{{ general.p4 }}
+L,{{ general.p4 }},{{ general.p1 }}
+
+
+al,{{ general.l1 }},{{ general.l2 }},{{ general.l3 }},{{ general.l4 }}
+
+
+{% for shape_name, shape in shapes.items() %}
+!Mid-Ellipse -1
+
+clocal,{{ shape.kcn }},{{ shape.kcs }},{{ shape.xl }},{{ shape.yl }},{{ shape.zl }},{{ shape.thxy }},{{ shape.THYZ }},{{ shape.thzx }},{{ shape.par1 }},{{ shape.par2 }}
+csys,{{ shape.kcn }}
+k,{{ shape.keypoint1_x }},{{ shape.keypoint1_y }},{{ shape.angle_of_rotation_1 }},{{ shape.ref }}
+k,{{ shape.keypoint2_x }},{{ shape.keypoint2_y }},{{ shape.angle_of_rotation_2 }},{{ shape.ref }}
+k,{{ shape.keypoint3_x }},{{ shape.keypoint3_y }},{{ shape.angle_of_rotation_3 }},{{ shape.ref }}
+k,{{ shape.keypoint4_x }},{{ shape.keypoint4_y }},{{ shape.angle_of_rotation_4 }},{{ shape.ref }}
+
+L,{{ shape.p5 }},{{ shape.p6 }}
+L,{{ shape.p6 }},{{ shape.p7 }}
+L,{{ shape.p7 }},{{ shape.p8 }}
+L,{{ shape.p8 }},{{ shape.p5 }}
+
+csys,{{ shape.kcn }}
+
+al,{{ shape.l5 }},{{ shape.l6 }},{{ shape.l7 }},{{ shape.l8 }}
+{% endfor %}
+
+!substraction of Ellipse 
+flst,{{ general.nfield_1 }},{{ general.narg_1 }},{{ general.type_1 }},ORDE,{{ general.leng_1 }}  
+fitem,{{ general.itemy_1 }},{{ general.itemz_1 }}
+fitem,{{ general.itemy_2 }},{{ general.itemz_2 }}   
+  
+ASBA,       {{ general.na1 }},P51X  
+
+!Extrude the Geometry
+flst,{{ general.nfield_2 }},{{ general.narg_2 }},{{ general.type_2 }},ORDE,{{ general.leng_2 }}
+fitem,{{ general.itemy_3 }},{{ general.itemz_3 }}  
+VEXT,P51X,,,{{ general.dx }},{{ general.dy }},{{ general.dz }},,,	
+
+gplot
