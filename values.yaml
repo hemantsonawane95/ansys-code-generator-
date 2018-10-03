@@ -48,7 +48,8 @@ shapes:
     l6: 6
     l7: 7
     l8: 8
-    kcn: 100
+    kcn1: 100
+    kcn2: 0
     kcs: 1
     xl: 0.5
     yl: 0.5
