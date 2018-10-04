@@ -129,7 +129,7 @@ shapes:
     keypoint1_x: 13
     keypoint2_x: 14
     keypoint3_x: 15
-    keypoint4_x: 15
+    keypoint4_x: 16
     keypoint1_y: 0.5
     keypoint2_y: 0.5
     keypoint3_y: 0.5
@@ -184,7 +184,7 @@ shapes:
     kcn_1: 100
     kcn_2: 0
     kcs: 1
-    xl: 1.1
+    xl: '1.-1'
     yl: 0.0
     zl: 0.0
     thxy: 315
