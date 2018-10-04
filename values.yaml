@@ -48,8 +48,8 @@ shapes:
     l6: 6
     l7: 7
     l8: 8
-    kcn1: 100
-    kcn2: 0
+    kcn_1: 100
+    kcn_2: 0
     kcs: 1
     xl: 0.5
     yl: 0.5
@@ -82,7 +82,8 @@ shapes:
     l6: 10
     l7: 11
     l8: 12
-    kcn: 100
+    kcn_1: 100
+    kcn_2: 0
     kcs: 1
     xl: 1.0
     yl: 0.0
@@ -114,7 +115,8 @@ shapes:
     l6: 14
     l7: 15
     l8: 16
-    kcn: 100
+    kcn_1: 100
+    kcn_2: 0
     kcs: 1
     xl: 0.0
     yl: 1.0
@@ -146,7 +148,8 @@ shapes:
     l6: 18
     l7: 19
     l8: 20
-    kcn: 100
+    kcn_1: 100
+    kcn_2: 0
     kcs: 1
     xl: 1.0
     yl: 1.0
@@ -178,7 +181,8 @@ shapes:
     l6: 22
     l7: 23
     l8: 24
-    kcn: 100
+    kcn_1: 100
+    kcn_2: 0
     kcs: 1
     xl: 1.1
     yl: 0.0
